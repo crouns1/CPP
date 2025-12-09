@@ -1,25 +1,20 @@
 #include <iostream>
 #include <string>
-void switch_to_upper(char **v) {
-    for (int i = 0; v[i] != NULL; ++i) {
-        for (int j = 0; v[i][j] != '\0'; ++j) {
-            if (v[i][j] >= 'a' && v[i][j] <= 'z') {
-                v[i][j] -= 32;  
-            }
-        }
-    }
-}
 
-int main(int c, char **v) {
-    if (c < 2)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-    else {
-        switch_to_upper(v);  
-        for (int i = 1; i < c; ++i) {  
-            std::cout << v[i] << " "; 
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+    } else {
+        for (int i = 1; i < argc; ++i) {
+            std::string arg = argv[i];
+            for (size_t j = 0; j < arg.size(); ++j) {
+                if (arg[j] >= 'a' && arg[j] <= 'z') {
+                    arg[j] -= 32;
+                }
+            }
+            std::cout << arg << " ";
         }
         std::cout << std::endl;
     }
     return 0;
 }
-
