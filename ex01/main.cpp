@@ -1,7 +1,3 @@
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <sstream>
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
@@ -11,8 +7,8 @@ std::string getInput(const std::string &prompt) {
     std::cout << prompt;
     std::getline(std::cin, input);
     while (input.empty()) {
-        if (std::cin.eof()) exit(0);
         std::cout << prompt;
+        if (std::cin.eof()) return "";
         std::getline(std::cin, input);
     }
     return input;
@@ -61,23 +57,12 @@ void handleExit() {
 int main() {
     PhoneBook phoneBook;
     std::string command;
-
-    std::cout << "Welcome to the PhoneBook!" << std::endl;
     std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
-
-    while (true) {
+    while (1) {
         std::cout << "\nEnter command: ";
         std::getline(std::cin, command);
         if (std::cin.eof())
             break;
-
-        if (command == "add" || command == "Add")
-            command = "ADD";
-        else if (command == "search" || command == "Search")
-            command = "SEARCH";
-        else if (command == "exit" || command == "Exit")
-            command = "EXIT";
-
         if (command == "ADD") {
             handleAdd(phoneBook);
         } else if (command == "SEARCH") {

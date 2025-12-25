@@ -1,7 +1,9 @@
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
-
+#include <iostream>
 #include <string>
+#include <cstdlib>
+#include <sstream>
 
 class Contact {
 private:
