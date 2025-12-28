@@ -1,20 +1,23 @@
-NAME = phonebook
-SRCS = main.cpp PhoneBook.cpp Contact.cpp
+EXE = phonebook
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all: $(NAME)
+all: $(EXE)
 
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+$(EXE): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(EXE) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(EXE)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+debug: CXXFLAGS += -g3 -O0
+debug: re
+
+.PHONY: all clean fclean re debug
