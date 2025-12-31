@@ -6,16 +6,19 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 11:34:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 13:52:12 by jait-chd         ###   ########.fr       */
+/*   Updated: 2025/12/31 11:37:33 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-Weapon::Weapon(std::string type) : type(type) {}
+
+Weapon::Weapon(std::string const &type) : type(type) {}
 Weapon::~Weapon(void) {}
-const std::string& Weapon::getType(void) const {
-    return type; 
+
+std::string const &Weapon::getType(void) const {
+	return type;
 }
-void Weapon::setType(std::string type) {
-    this->type = type;
+
+void Weapon::setType(std::string const &type) {
+	this->type = type;
 }

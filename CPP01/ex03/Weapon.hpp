@@ -6,24 +6,23 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 13:52:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 13:52:31 by jait-chd         ###   ########.fr       */
+/*   Updated: 2025/12/31 11:37:35 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WAEPON_HPP
-#define WAEPON_HPP
-#include <string>
-#include <iostream>
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
+#include <string>
 
 class Weapon {
-    private:
-        std::string type;
-    public:
-        Weapon(std::string type);
-        ~Weapon(void);
-        const std::string& getType(void) const;
-        void setType(std::string type);
+	private:
+		std::string type;
+	public:
+		Weapon(std::string const &type);
+		~Weapon(void);
+		std::string const &getType(void) const;
+		void setType(std::string const &type);
 };
 
 #endif

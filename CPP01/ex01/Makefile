@@ -6,12 +6,12 @@
 #    By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/31 13:46:17 by jait-chd          #+#    #+#              #
-#    Updated: 2025/12/31 13:46:17 by jait-chd         ###   ########.fr        #
+#    Updated: 2025/12/31 10:29:39 by jait-chd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME : Horde0fZombies
-SRCS = *.cpp
+NAME = moar_brainz
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -30,4 +30,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
 

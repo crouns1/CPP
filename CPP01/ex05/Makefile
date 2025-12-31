@@ -1,12 +1,9 @@
-NAME = violence
-SRCS = main.cpp \
-	   Weapon.cpp \
-	   HumanA.cpp \
-	   HumanB.cpp
+NAME = harl
 
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
-CXX = c++
 
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)

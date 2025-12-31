@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/31 07:32:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 10:29:44 by jait-chd         ###   ########.fr       */
+/*   Created: 2025/12/31 09:19:47 by jait-chd          #+#    #+#             */
+/*   Updated: 2025/12/31 11:27:47 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombiecrowd.hpp"
 
-Zombie* zombieHorde( int N, std::string name ){
-    Zombie *crowd = new Zombie[N];
-    for(int i = 0; i < N ; i++) {
-        crowd[i].setTheName(name);
-    }
-    return crowd;
+
+#include <iostream>
+
+#include "Harl.hpp"
+
+int main(int c, char **v) {
+	Harl harl;
+
+	if (c == 2) {
+		harl.complain(v[1]);
+		return 0;
+	}
+	if (c != 1) {
+		std::cerr << "Usage: ./harl [DEBUG|INFO|WARNING|ERROR]" << std::endl;
+		return 1;
+	}
+
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("NOT_A_LEVEL");
+
+	return 0;
 }
