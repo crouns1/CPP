@@ -6,12 +6,12 @@
 #    By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/27 10:34:52 by jait-chd          #+#    #+#              #
-#    Updated: 2025/12/28 17:43:42 by jait-chd         ###   ########.fr        #
+#    Updated: 2025/12/31 13:21:18 by jait-chd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
-SRCS = main.cpp
+NAME = zombie
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

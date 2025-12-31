@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/31 13:52:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 13:52:31 by jait-chd         ###   ########.fr       */
+/*   Created: 2025/12/31 13:12:14 by jait-chd          #+#    #+#             */
+/*   Updated: 2025/12/31 13:24:00 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WAEPON_HPP
-#define WAEPON_HPP
-#include <string>
-#include <iostream>
 
+#include "Zombie.hpp"
 
-class Weapon {
-    private:
-        std::string type;
-    public:
-        Weapon(std::string type);
-        ~Weapon(void);
-        const std::string& getType(void) const;
-        void setType(std::string type);
-};
+Zombie::Zombie(std::string s) : name(s)
+{
+	std::cout << name << " : created successfuly" << std::endl;
+}
 
-#endif
+Zombie::~Zombie()
+{
+	std::cout << name << " :  died successfully" << std::endl;
+}
+
+void	Zombie::announce(void) const
+{
+	std::cout << name << ": ...BraiiiiiiinnnzzzZ...\n" << std::endl;
+}

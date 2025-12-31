@@ -5,14 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/27 10:47:38 by jait-chd          #+#    #+#              #
-#    Updated: 2025/12/31 13:48:51 by jait-chd         ###   ########.fr        #
+#    Created: 2025/12/31 13:46:17 by jait-chd          #+#    #+#              #
+#    Updated: 2025/12/31 13:46:17 by jait-chd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME = ThisIsBrain
-SRCS = main.cpp
+NAME : Horde0fZombies
+SRCS = *.cpp
 OBJS = $(SRCS:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
