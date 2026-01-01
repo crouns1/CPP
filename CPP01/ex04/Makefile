@@ -11,15 +11,12 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-tests: tests.o Replace.o
-	$(CXX) $(CXXFLAGS) -o tests tests.o Replace.o
-
 clean:
-	rm -f $(OBJS) tests.o
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) tests
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all tests clean fclean re
+.PHONY: all clean fclean re

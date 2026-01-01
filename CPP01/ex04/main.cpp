@@ -6,13 +6,9 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 09:09:38 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 09:21:52 by jait-chd         ###   ########.fr       */
+/*   Updated: 2025/12/31 19:56:07 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <fstream>
-#include <iostream>
-#include <string>
 
 #include "Replace.hpp"
 

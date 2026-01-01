@@ -6,13 +6,12 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 10:32:10 by jait-chd          #+#    #+#             */
-/*   Updated: 2025/12/31 10:29:24 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/01 14:32:25 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
-
 #include <string>
 #include <iostream>
 
