@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 08:38:24 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/05 08:43:00 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/05 08:54:41 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,19 +130,27 @@ Fixed Fixed::operator--(int) {
 }
 
 Fixed& Fixed::min(Fixed& a, Fixed& b) {
-	return (a < b) ? a : b;
+	if (a < b)
+		return a;
+	return b;
 }
 
 const Fixed& Fixed::min(const Fixed& a, const Fixed& b) {
-	return (a < b) ? a : b;
+	if (a < b)
+		return a;
+	return b;
 }
 
 Fixed& Fixed::max(Fixed& a, Fixed& b) {
-	return (a > b) ? a : b;
+	if (a > b)
+		return a;
+	return b;
 }
 
 const Fixed& Fixed::max(const Fixed& a, const Fixed& b) {
-	return (a > b) ? a : b;
+	if (a > b)
+		return a;
+	return b;
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f) {
