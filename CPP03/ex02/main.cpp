@@ -5,27 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 10:21:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/07 07:57:58 by jait-chd         ###   ########.fr       */
+/*   Created: 2026/01/07 10:21:17 by jait-chd          #+#    #+#             */
+/*   Updated: 2026/01/07 07:58:29 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
-	ClapTrap a("A");
-	ClapTrap b("B");
+	FragTrap frag("Fraggy");
+	FragTrap copy(frag);
 
-	a.attack("a wall");
-	a.takeDamage(3);
-	a.beRepaired(5);
+	frag.attack("target");
+	frag.takeDamage(90);
+	frag.beRepaired(40);
+	frag.highFivesGuys();
 
-	for (int i = 0; i < 11; ++i)
-		b.attack("nothing");
+	for (int i = 0; i < 101; ++i)
+		frag.attack("nothing");
 
-	a.takeDamage(100);
-	a.attack("target");
-	a.beRepaired(1);
+	copy = frag;
+	copy.highFivesGuys();
+	copy.attack("other target");
 
 	return 0;
 }

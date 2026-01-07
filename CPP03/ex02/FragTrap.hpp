@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 10:21:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/07 07:57:58 by jait-chd         ###   ########.fr       */
+/*   Created: 2026/01/07 10:21:17 by jait-chd          #+#    #+#             */
+/*   Updated: 2026/01/07 07:58:26 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main() {
-	ClapTrap a("A");
-	ClapTrap b("B");
+class FragTrap : public ClapTrap {
+public:
+	FragTrap();
+	FragTrap(const std::string& name);
+	FragTrap(const FragTrap& other);
+	FragTrap& operator=(const FragTrap& other);
+	~FragTrap();
 
-	a.attack("a wall");
-	a.takeDamage(3);
-	a.beRepaired(5);
+	void attack(const std::string& target);
+	void highFivesGuys();
+};
 
-	for (int i = 0; i < 11; ++i)
-		b.attack("nothing");
-
-	a.takeDamage(100);
-	a.attack("target");
-	a.beRepaired(1);
-
-	return 0;
-}
+#endif

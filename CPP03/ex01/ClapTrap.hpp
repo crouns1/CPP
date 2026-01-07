@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 10:21:22 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/05 10:45:42 by jait-chd         ###   ########.fr       */
+/*   Created: 2026/01/07 12:35:12 by jait-chd          #+#    #+#             */
+/*   Updated: 2026/01/07 07:58:11 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 class ClapTrap {
 protected:
-	std::string  _name;
-	unsigned int _hitPoints;
-	unsigned int _energyPoints;
-	unsigned int _attackDamage;
+	std::string  name;
+	unsigned int hitPts;
+	unsigned int energyPts;
+	unsigned int attackDmg;
 
 public:
 	ClapTrap();
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& other);
 	ClapTrap& operator=(const ClapTrap& other);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
-	void attack(const std::string& target);
+	virtual void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };

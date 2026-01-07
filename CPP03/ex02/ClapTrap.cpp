@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 10:21:11 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/07 07:57:53 by jait-chd         ###   ########.fr       */
+/*   Created: 2026/01/07 10:21:17 by jait-chd          #+#    #+#             */
+/*   Updated: 2026/01/07 07:58:20 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
 
 ClapTrap::ClapTrap() : name("crouns") , hitPts(10) , energyPts(10), attackDmg(0) {
 	std::cout << "clap trap default constructor called" << std::endl;
@@ -21,10 +20,9 @@ ClapTrap::ClapTrap(const std::string& Name) : name(Name) , hitPts(10) , energyPt
 	std::cout << "clap trap param constructor called " <<  name  << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name) , hitPts(other.hitPts) , attackDmg(other.attackDmg) {
+ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name) , hitPts(other.hitPts) , energyPts(other.energyPts), attackDmg(other.attackDmg) {
 	std::cout << "Clap trap copy constructor called " << name << std::endl;
 }
-
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 	if(this != &other) {
@@ -40,6 +38,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 ClapTrap::~ClapTrap() {
 	std::cout << "clap trap destructor called " << name << std::endl; 
 }
+
 void ClapTrap::attack(const std::string& target) {
 	if(hitPts == 0) {
 		std::cout << "clap trap " << name << "cant attack (no hit pts availlable) " << std::endl;
@@ -76,5 +75,3 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	hitPts += amount;
 	std::cout << "clap trap " << name << " repairs itself , regaining " << amount << " hit pts " << std::endl;
 }
-
-
