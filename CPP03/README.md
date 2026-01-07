@@ -4,7 +4,7 @@
 - Coplien form: default ctor, copy ctor, copy assignment, destructor implemented for each class.
 - Encapsulation: members kept `protected` in `ClapTrap` so derived classes can reuse stats; interface methods are public.
 - Inheritance: `ScavTrap` and `FragTrap` publicly derive from `ClapTrap`, reuse its logic, and override `attack`.
-- Polymorphism basics: `attack` is `virtual` in the base to allow derived overrides in later exercises.
+- Override-friendly design: derived classes override `attack` without using `virtual` in this project scope.
 - State management: guards prevent actions when `hitPts` or `energyPts` reach zero; actions spend energy; damage clamps hit points to zero.
 - Build system: each exercise has its own `Makefile` building an `exe` binary from the local sources.
 
@@ -32,5 +32,5 @@
   - `make clean` removes object files; `make fclean` also removes the binary; `make re` rebuilds.
 
 ## Notes
-- The base destructor is non-virtual in this code because objects are used directly (no polymorphic deletes); adding `virtual` would be a safe extension if polymorphic deletion were needed.
+- No `virtual` keywords are used here per project rules; the code does not rely on polymorphic deletion or base-class pointers.
 - Stats can be tweaked inside derived constructors if you want different balancing without touching the base class.
