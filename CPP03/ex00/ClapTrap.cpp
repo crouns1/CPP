@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 10:21:11 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/08 11:52:18 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 11:46:58 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(const std::string& Name) : name(Name) , hitPts(10) , energyPt
 	std::cout << "clap trap param constructor called " <<  name  << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name) , hitPts(other.hitPts) , attackDmg(other.attackDmg) {
+ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name) , hitPts(other.hitPts) , energyPts(other.energyPts), attackDmg(other.attackDmg) {
 	std::cout << "Clap trap copy constructor called " << name << std::endl;
 }
 

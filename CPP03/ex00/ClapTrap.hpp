@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 10:21:14 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/08 11:52:24 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:01:40 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 
 class ClapTrap {
-protected:
+private:
 	std::string  name;
 	unsigned int hitPts;
 	unsigned int energyPts;

@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 12:35:12 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/08 11:52:09 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:08:56 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ protected:
 	unsigned int hitPts;
 	unsigned int energyPts;
 	unsigned int attackDmg;
+
+	const std::string& getName() const;
+	unsigned int getHitPts() const;
+	unsigned int getEnergyPts() const;
+	unsigned int getAttackDmg() const;
+	void setName(const std::string& n);
+	void setHitPts(unsigned int v);
+	void setEnergyPts(unsigned int v);
+	void setAttackDmg(unsigned int v);
 
 public:
 	ClapTrap();

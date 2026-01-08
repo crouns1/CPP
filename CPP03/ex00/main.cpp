@@ -6,26 +6,27 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 10:21:17 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/08 11:52:26 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 11:52:33 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main() {
-	ClapTrap a("A");
-	ClapTrap b("B");
+	ClapTrap alpha("Alpha");
+	ClapTrap beta("Beta");
 
-	a.attack("a wall");
-	a.takeDamage(3);
-	a.beRepaired(5);
+	alpha.attack("a dummy");
+	alpha.takeDamage(3);
+	alpha.beRepaired(2);
 
-	for (int i = 0; i < 11; ++i)
-		b.attack("nothing");
+	for (int i = 0; i < 10; ++i)
+		alpha.attack("empty space");
+	alpha.attack("late target");
 
-	a.takeDamage(100);
-	a.attack("target");
-	a.beRepaired(1);
+	beta.takeDamage(11);
+	beta.attack("impossible target");
+	beta.beRepaired(5);
 
 	return 0;
 }

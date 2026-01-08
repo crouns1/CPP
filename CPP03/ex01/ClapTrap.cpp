@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 12:31:57 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/08 11:52:07 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:01:15 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,15 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 ClapTrap::~ClapTrap() {
 	std::cout << "clap trap destructor called " << name << std::endl; 
 }
+
+const std::string& ClapTrap::getName() const { return name; }
+unsigned int ClapTrap::getHitPts() const { return hitPts; }
+unsigned int ClapTrap::getEnergyPts() const { return energyPts; }
+unsigned int ClapTrap::getAttackDmg() const { return attackDmg; }
+void ClapTrap::setName(const std::string& n) { name = n; }
+void ClapTrap::setHitPts(unsigned int v) { hitPts = v; }
+void ClapTrap::setEnergyPts(unsigned int v) { energyPts = v; }
+void ClapTrap::setAttackDmg(unsigned int v) { attackDmg = v; }
 
 void ClapTrap::attack(const std::string& target) {
 	if(hitPts == 0) {
