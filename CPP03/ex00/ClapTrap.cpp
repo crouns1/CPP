@@ -6,7 +6,7 @@
 /*   By: jait-chd <jait-chd@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 10:21:11 by jait-chd          #+#    #+#             */
-/*   Updated: 2026/01/07 07:57:53 by jait-chd         ###   ########.fr       */
+/*   Updated: 2026/01/08 11:52:18 by jait-chd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 ClapTrap::~ClapTrap() {
 	std::cout << "clap trap destructor called " << name << std::endl; 
 }
+
 void ClapTrap::attack(const std::string& target) {
 	if(hitPts == 0) {
 		std::cout << "clap trap " << name << "cant attack (no hit pts availlable) " << std::endl;
