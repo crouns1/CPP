@@ -2,11 +2,11 @@
 
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
-	return "Grade too high";
+	return " Grade too high";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() {
-	return "Grade too low";
+	return " Grade too low";
 }
 
 void Bureaucrat::little_check_grade(int grade_x) {
@@ -22,7 +22,7 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name), grade(g
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade)
 {
-	std::cout << "copy constructor called \n";
+	std::cout << " copy constructor called \n";
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)

@@ -1,6 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
-
+#include "AForm.hpp"
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
 	return "Grade too high";
@@ -23,7 +22,6 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name), grade(g
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade)
 {
-	std::cout << "copy constructor called \n";
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
@@ -60,13 +58,24 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& b) {
 	return os;
 }
 
-void Bureaucrat::signForm(Form& form) {
+void Bureaucrat::signForm(AForm& form) {
 	try {
 		form.beSigned(*this);
 		std::cout << getName() << " signed " << form.getName() << std::endl;
 	}
 	catch (const std::exception& e) {
 		std::cout << getName() << " couldn't sign " << form.getName() 
+		          << " because " << e.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(const AForm& form) {
+	try {
+		form.execute(*this);
+		std::cout << getName() << " executed " << form.getName() << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cout << getName() << " couldn't execute " << form.getName() 
 		          << " because " << e.what() << std::endl;
 	}
 }
